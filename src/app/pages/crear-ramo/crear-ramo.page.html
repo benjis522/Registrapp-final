@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Ramo o Sección</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ramoForm" (ngSubmit)="guardarDatos()">
+    <!-- Seleccionar o Crear Ramo -->
+    <ion-item>
+      <ion-label>Ramo</ion-label>
+      <ion-select formControlName="ramoSeleccionado" interface="popover" (ionChange)="onRamoChange()">
+        <ion-select-option *ngFor="let ramo of ramos" [value]="ramo">
+          {{ ramo.nombre }}
+        </ion-select-option>
+        <ion-select-option [value]="null">Crear nuevo ramo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Nombre del Ramo (Solo si es nuevo) -->
+    <ion-item *ngIf="!ramoForm.get('ramoSeleccionado')?.value">
+      <ion-label position="floating">Nombre del Nuevo Ramo</ion-label>
+      <ion-input formControlName="nombreRamo"></ion-input>
+    </ion-item>
+
+    <!-- Nombre de la Sección -->
+    <ion-item>
+      <ion-label position="floating">Nombre de la Sección</ion-label>
+      <ion-input formControlName="nombreSeccion" required></ion-input>
+    </ion-item>
+
+    <!-- Seleccionar Profesor -->
+    <ion-item>
+      <ion-label>Profesor</ion-label>
+      <ion-select formControlName="profesor" interface="popover">
+        <ion-select-option *ngFor="let profesor of profesores" [value]="profesor">
+          {{ profesor.nombre }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="ramoForm.invalid">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>

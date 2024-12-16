@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content>
+  
+  <ion-card class="custom-card">
+    <img alt="Silhouette of mountains" src="assets/seccion/login2.png" />
+    <ion-card-content style="background-color: #f3f3ee00; color: rgb(0, 0, 0); "[formGroup]="loginForm">
+      <ion-item>
+        <ion-input   formControlName="email" [(ngModel)]="emailValue" type="email" label="Usuario:" labelPlacement="floating" placeholder="Ej: Panshoots"></ion-input>
+      </ion-item>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('email')?.hasError('required')">
+        El correo es requerido!
+      </ion-text>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('email')?.hasError('email')">
+        El correo es inválido!
+      </ion-text>
+      <ion-item>
+        <ion-input formControlName="pass" [(ngModel)]="passValue" type="password" labelPlacement="floating" label="Contraseña:" placeholder="Ej: 123456"></ion-input>
+      </ion-item>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('pass')?.hasError('required')">
+        La contraseña es requerida!
+      </ion-text>
+      <ion-text position="stacked" color="danger" *ngIf="loginForm.get('pass')?.hasError('minlength')">
+        La contraseña tiene como min 6 caracteres!
+      </ion-text>
+      <ion-button class="custom-button" expand="full" (click)="login()">Ingresar</ion-button>
+      <ion-button class="custom-button" expand="full" routerLink="/register">Registrarse</ion-button>
+      <ion-button fill="clear" expand="full" routerLink="/recovery" >olvidaste tu contraseña?</ion-button>
+      <ion-button (click)="generateUsers()">Generar 10 cuentas</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title color="primary">Recuperar contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content >
+      Escriba su correo para recuperar su contraseña:
+      <form (submit)="recoveryPassword()">
+        <ion-input type="email" placeholder="example@duocuc.cl" name="email" [(ngModel)]="email"></ion-input>
+        <ion-button class="custom-button" type="submit">Recuperar contraseña</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

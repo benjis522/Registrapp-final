@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="white">detalle-seccion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let aux of AlumnosFiltrados" (click)="verDetalleAlumno(aux)">
+      <ion-label>
+        <h2> {{ aux.nombre }} {{ aux.apellido }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <p>REGISTRAR ASISTENCIA</p>
+  <ion-button routerLink="/qr">generar qr</ion-button>
+</ion-content>

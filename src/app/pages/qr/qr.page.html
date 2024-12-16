@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Genera un QR para la asistencia</h2>
+
+  <!-- Muestra el código QR generado  hay un problema con el <ng-qrcode>  -->
+
+    <qrcode [qrdata]="qrValue" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+</ion-content>

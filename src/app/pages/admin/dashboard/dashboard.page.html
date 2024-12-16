@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ADMINISTRADOR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="custom-content">
+
+  <ion-list *ngFor="let aux of usuarios">
+    <ion-item style="font-size: 2px; padding: 2px; height: 100px;">
+      <ion-label>
+        <p>tipo: {{ aux.tipo }}</p>
+        <h2>{{ aux.email }}</h2>
+        
+      </ion-label>
+      <div>
+        <ion-button fill="outline" color="secundary" (click)="editarUser(aux.uid)">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon> 
+        </ion-button>
+        <ion-button color="danger" (click)="eliminarUsuario(aux.uid)">x</ion-button>
+      </div> 
+      
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

@@ -1,0 +1,39 @@
+.custom-card {
+    margin: 5%;
+    background-color: #5f5a5a00;
+    color: rgba(0, 0, 0, 0);
+    margin-top: 30%;
+  }
+
+  :host {
+    ion-content {
+        --background: url('/assets/background.jpg') no-repeat center center/cover;
+        --ion-background-color: #eff2f61b !important;
+        background-position: center, center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+  }
+
+  .custom-button {
+    --border-width: 2px; /* Grosor del borde */
+    --border-style: dashed; /* Tipo de borde: solid, dashed, dotted, etc. */
+    --border-color: #3500f5c9; /* Color del borde */
+    --border-radius: 50px; /* Bordes redondeados */
+    --background: transparent /* Fondo transparente */
+    color: #; /* Color del texto */
+  }
+
+  ion-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+
+  .custom-content {
+    padding: 10px;
+    height: 100%; /* Asegura que ocupe toda la altura de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra verticalmente si es necesario */
+    align-items: center; /* Centra horizontalmente si es necesario */
+  }

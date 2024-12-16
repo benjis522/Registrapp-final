@@ -1,0 +1,33 @@
+ion-label {
+    margin-left: 20px;
+}
+ion-toolbar {
+    --background: transparent;   /* Fondo transparente */
+    --ion-background-color: transparent; /* Alternativa para asegurar fondo */
+    box-shadow: none;            /* Eliminar la sombra */
+  }
+  .custom-card {
+    margin: 5%;
+    background-color: #5f5a5a00;
+    color: rgba(0, 0, 0, 0);
+    margin-top: 30%;
+  }
+
+  :host {
+    ion-content {
+        --background: url('/assets/background.jpg') no-repeat center center/cover;
+        --ion-background-color: #0800fe74 !important;
+        background-position: center, center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+  }
+
+  .custom-button {
+    --border-width: 2px; /* Grosor del borde */
+    --border-style: dashed; /* Tipo de borde: solid, dashed, dotted, etc. */
+    --border-color: #ffffffc9; /* Color del borde */
+    --border-radius: 50px; /* Bordes redondeados */
+    --background: transparent /* Fondo transparente */
+    color: #; /* Color del texto */
+  }

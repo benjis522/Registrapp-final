@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- CARD PARA LA BIENVENIDA -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Hola {{usuarioLogin}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Bienvenido al sistema, estamos felices de tenerte aquí.
+    </ion-card-content>
+  </ion-card>
+  <!-- CARD PARA IR A LAS SECCIONES -->
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/seccion/seccion.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Ramos</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <p>detalle de tus ramos</p>
+      <ion-button routerLink="/ramos" expand="full">
+        <ion-icon slot="start" name="eye" ></ion-icon>
+        Ver Ramos
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- CARD PARA IR A LOS ALUMNOS -->
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/seccion/alumnos.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Tu perfil</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <p>Ver tus datos</p>
+      <ion-button routerLink="/alumnos" expand="full">
+        <ion-icon slot="start" name="eye" ></ion-icon>
+        Ver tu perfil
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,48 @@
+
+
+<ion-header [translucent]="true">
+ 
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- CARD PARA LA BIENVENIDA -->
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title color="primary">Hola Colaborador</ion-card-title>
+    </ion-card-header>
+  
+  </ion-card>
+  <!-- CARD PARA IR A LOS RAMOS -->
+  <ion-card class="custom-card">
+    <img alt="Silhouette of mountains" src="assets/seccion/seccion.jpeg" />
+    <ion-card-header>
+      <ion-card-title color="secondary">Ramos</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content >
+     <p>detalle de tus ramos</p>
+      <ion-button class="custom-button" routerLink="/ramos" expand="full">
+        <ion-icon slot="start" name="eye" ></ion-icon>
+        Ver Ramos
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="custom-card">
+    <img alt="Silhouette of mountains" src="assets/asistencia.jpg" />
+    <ion-card-header>
+      <ion-card-title color="white">Asistencias Anteriores</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <p>detalle de asistencias</p>
+      <ion-button class="custom-button" routerLink="/asistencia" expand="full">
+        <ion-icon slot="start" name="eye" ></ion-icon>
+        Ver Ramos
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escanearqr</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" color="primary" (click)="toggleImage()">
+    Escanear
+  </ion-button>
+  <img *ngIf="showImage" src="assets/escanear.png" alt="Imagen Descripción" />
+
+
+</ion-content>

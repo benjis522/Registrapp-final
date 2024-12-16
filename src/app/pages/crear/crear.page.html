@@ -1,0 +1,66 @@
+<ion-header>
+   
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="person-circle"></ion-icon>
+      Registro de Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+  <form [formGroup]="registroForm" (ngSubmit)="registrarUsuario()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registroForm.get('nombre')">
+      Nombre es requerido.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input formControlName="apellido" type="text"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registroForm.get('apellido')">
+      Apellido es requerido.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input formControlName="direccion" type="text"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registroForm.get('direccion')">
+      Dirección es requerida.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="pass" type="password"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registroForm.get('pass')">
+      Contraseña debe tener al menos 6 caracteres.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input formControlName="telefono" type="text"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="registroForm.get('telefono')">
+      El teléfono debe comenzar con 9 y tener 9 dígitos.
+    </ion-text>
+
+    <ion-item>
+      <ion-label>Tipo de Usuario</ion-label>
+      <ion-select formControlName="tipo">
+        <ion-select-option value="usuario">Profesor</ion-select-option>
+        <ion-select-option value="admin">Administrador</ion-select-option>
+        <ion-select-option value="invitado">Alumno</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button class="" expand="block" type="submit" [disabled]="registroForm.invalid">
+      Registrar Usuario
+    </ion-button>
+  </form>
+</ion-content>
